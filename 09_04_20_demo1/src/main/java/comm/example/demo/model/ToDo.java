@@ -25,4 +25,10 @@ public class ToDo {
 		this.todoID=UUID.randomUUID().toString();
 		this.todoName=todoName;
 	}
+
+	/*
+	 * @Override public String toString() { return "ToDo [todoID=" + todoID +
+	 * ", todoName=" + todoName + "]"; }
+	 */
+	
 }
