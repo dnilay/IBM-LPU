@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xmlns:context="http://www.springframework.org/schema/context"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-<bean name="myCoach" class="comm.example.bean.BaseBallCoach">
-<property name="fortuneService" ref="fortuneService"/>
-</bean>
+	<bean name="myCoach" class="comm.example.bean.BaseBallCoach">
+		<property name="fortuneService" ref="fortuneService" />
+	</bean>
 
-<bean name="fortuneService" class="comm.example.bean.DailyFortuneService">
-</bean>
+	<bean name="fortuneService"
+		class="comm.example.bean.DailyFortuneService">
+	</bean>
+	<bean name="theCustomer" class="comm.example.bean.Customer">
+		<constructor-arg name="customerName" value="Customer1" />
+		<constructor-arg name="address" ref="address"/>
+	</bean>
+	<bean name="address" class="comm.example.bean.Address">
+		<property name="addressLine1" value="Hyderabad" />
+		<property name="addressLine2" value="INDIA" />
+	</bean>
 
 </beans>
 
