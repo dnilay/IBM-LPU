@@ -22,5 +22,13 @@ public class Coach {
 	}
 	
 	
+public void initializeBean()
+{
+	System.out.println("bean initialized..");
+}
 
+public void finalizedBean()
+{
+	System.out.println("bean is going to destroy");
+}
 }

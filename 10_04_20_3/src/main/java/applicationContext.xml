@@ -8,7 +8,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 <context:property-placeholder location="classpath:sports.properties"/>
-<bean id="coach" class="comm.example.bean.Coach">
+<bean id="coach" class="comm.example.bean.Coach" init-method="initializeBean" destroy-method="finalizedBean">
 
 <property name="eamil" value="${coach.email}" />
 <property name="team" value="${coach.team}" />
