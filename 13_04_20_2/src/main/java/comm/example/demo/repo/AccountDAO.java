@@ -10,5 +10,8 @@ public interface AccountDAO {
 	public List<Account> getAllAccountDetails();
 	
 	public Account findByAccountNumber(String accountNumber);
+	public List<Account> findByAmount(int amount);
+	
+	public Account deleteById(String accountNumber);
 
 }

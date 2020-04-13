@@ -49,7 +49,15 @@ public class AccountDAOImpl implements AccountDAO{
 
 	public Account findByAccountNumber(String accountNumber) {
 		// TODO Auto-generated method stub
+		
 		return jdbcTemplate.queryForObject("select * from account where accountNumber=?", new Object[] {accountNumber},new AccountRowMapper());
+	}
+
+
+
+	public List<Account> findByAmount(int amount) {
+		// TODO Auto-generated method stub
+		return jdbcTemplate.query("select * from account where balance>?",new Object[] {amount},new AccountRowMapper());
 	}
 	
 	

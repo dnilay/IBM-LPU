@@ -50,8 +50,14 @@ public class App
 		 * System.out.println(account2); }
 		 */
 		
-		account=service.findByAccountNumber("46555cd3");
-		System.out.println(account);
+		/*
+		 * account=service.findByAccountNumber("46555cd3"); System.out.println(account);
+		 */
+		List<Account> l=service.findByAmount(5000);
+		for(Account a:l)
+		{
+			System.out.println(a);
+		}
 		
 		
 		 

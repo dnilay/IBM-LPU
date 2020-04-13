@@ -32,4 +32,9 @@ public class AccountServiceImpl implements AccountService {
 		return accountDAO.findByAccountNumber(accountNumber);
 	}
 
+	public List<Account> findByAmount(int amount) {
+		// TODO Auto-generated method stub
+		return accountDAO.findByAmount(amount);
+	}
+
 }
