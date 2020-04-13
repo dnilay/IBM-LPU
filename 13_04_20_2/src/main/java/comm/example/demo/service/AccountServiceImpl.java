@@ -37,4 +37,8 @@ public class AccountServiceImpl implements AccountService {
 		return accountDAO.findByAmount(amount);
 	}
 
+	public void deleteById(String accountNumber) {
+		accountDAO.deleteById(accountNumber);
+	}
+
 }

@@ -53,11 +53,12 @@ public class App
 		/*
 		 * account=service.findByAccountNumber("46555cd3"); System.out.println(account);
 		 */
-		List<Account> l=service.findByAmount(5000);
-		for(Account a:l)
-		{
-			System.out.println(a);
-		}
+		/*
+		 * List<Account> l=service.findByAmount(5000); for(Account a:l) {
+		 * System.out.println(a); }
+		 */
+		
+		service.deleteById("f53ce40c");
 		
 		
 		 

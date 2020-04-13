@@ -12,6 +12,6 @@ public interface AccountDAO {
 	public Account findByAccountNumber(String accountNumber);
 	public List<Account> findByAmount(int amount);
 	
-	public Account deleteById(String accountNumber);
+	public void deleteById(String accountNumber);
 
 }
