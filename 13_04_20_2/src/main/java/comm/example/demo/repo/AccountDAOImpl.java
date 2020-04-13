@@ -44,6 +44,13 @@ public class AccountDAOImpl implements AccountDAO{
 		List<Account> accounts=jdbcTemplate.query("select * from account", new BeanPropertyRowMapper(Account.class));
 		return accounts;
 	}
+
+
+
+	public Account findByAccountNumber(String accountNumber) {
+		// TODO Auto-generated method stub
+		return jdbcTemplate.queryForObject("select * from account where accountNumber=?", new Object[] {accountNumber},new AccountRowMapper());
+	}
 	
 	
 

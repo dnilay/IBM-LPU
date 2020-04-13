@@ -27,4 +27,9 @@ public class AccountServiceImpl implements AccountService {
 		return accountDAO.getAllAccountDetails();
 	}
 
+	public Account findByAccountNumber(String accountNumber) {
+		// TODO Auto-generated method stub
+		return accountDAO.findByAccountNumber(accountNumber);
+	}
+
 }

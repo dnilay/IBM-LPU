@@ -8,5 +8,7 @@ public interface AccountDAO {
 	
 	public Account createAccount(Account account);
 	public List<Account> getAllAccountDetails();
+	
+	public Account findByAccountNumber(String accountNumber);
 
 }

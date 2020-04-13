@@ -44,9 +44,16 @@ public class App
 		 */
 		 
 		
-		  List<Account> list=service.getAllAccountDetails(); Iterator<Account>
-		  i=list.iterator(); while(i.hasNext()) { Account account2=i.next();
-		  System.out.println(account2); }
+		/*
+		 * List<Account> list=service.getAllAccountDetails(); Iterator<Account>
+		 * i=list.iterator(); while(i.hasNext()) { Account account2=i.next();
+		 * System.out.println(account2); }
+		 */
+		
+		account=service.findByAccountNumber("46555cd3");
+		System.out.println(account);
+		
+		
 		 
 		
     }
