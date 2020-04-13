@@ -6,9 +6,10 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+<bean name="dataSource" class="DriverManagerDataSource"/>
 
     <context:component-scan base-package="comm.example.demo"/>
-    
+    <context:property-placeholder location="classpath:dbconnect.properties"/>
 </beans>
 
 
