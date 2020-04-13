@@ -1,12 +1,16 @@
 package comm.example.demo.repo;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import comm.example.demo.bean.Account;
+import comm.example.demo.bean.AccountRowMapper;
 
 @Repository("accountDAO")
 public class AccountDAOImpl implements AccountDAO{
@@ -30,6 +34,15 @@ public class AccountDAOImpl implements AccountDAO{
 		jdbcTemplate.update(query);
 		
 		return account;
+	}
+
+
+
+	public List<Account> getAllAccountDetails() {
+		// TODO Auto-generated method stub
+		//List<Account> accounts=jdbcTemplate.query("select * from account",new AccountRowMapper());
+		List<Account> accounts=jdbcTemplate.query("select * from account", new BeanPropertyRowMapper(Account.class));
+		return accounts;
 	}
 	
 	

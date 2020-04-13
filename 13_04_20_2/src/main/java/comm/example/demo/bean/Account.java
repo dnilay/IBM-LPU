@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component;
 public class Account {
 	
 	private String accountNumber;
-	private AccountType accountType;
+	private String accountType;
 	private int initialBalance;
 
 	public Account() {
 		super();
 	}
-	public Account(String accountNumber, AccountType accountType, int initialBalance) {
+	public Account(String accountNumber, String accountType, int initialBalance) {
 		super();
 		this.accountNumber = accountNumber;
 		this.accountType = accountType;
@@ -25,10 +25,10 @@ public class Account {
 	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
 	}
-	public AccountType getAccountType() {
+	public String getAccountType() {
 		return accountType;
 	}
-	public void setAccountType(AccountType accountType) {
+	public void setAccountType(String accountType) {
 		this.accountType = accountType;
 	}
 	public int getInitialBalance() {
