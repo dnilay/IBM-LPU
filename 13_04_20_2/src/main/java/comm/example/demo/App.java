@@ -8,6 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import comm.example.demo.bean.ToDo;
 import comm.example.demo.repo.ToDoRepository;
 import comm.example.demo.repo.ToDoRepositoryImpl;
+import comm.example.demo.service.ToDoService;
+import comm.example.demo.service.ToDoServiceImpl;
 
 public class App 
 {
@@ -18,8 +20,12 @@ public class App
 	public static void main( String[] args )
     {
 		ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
-		ToDoRepository toDoRepository=context.getBean("toDoRepositoryImpl",ToDoRepositoryImpl.class); 
-		ToDo todo=toDoRepository.createToDo(new ToDo(UUID.randomUUID().toString(), "compile"));
+		ToDoService service=context.getBean("toDoServiceImpl",ToDoServiceImpl.class);
+		ToDo todo=context.getBean("toDo",ToDo.class);
+		todo.setTodoID(UUID.randomUUID().toString());
+		todo.setTodoName("testing");
+		todo=service.createToDo(todo);
 		System.out.println(todo);
+		
     }
 }

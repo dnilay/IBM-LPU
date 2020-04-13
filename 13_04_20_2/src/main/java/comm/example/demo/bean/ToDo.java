@@ -2,7 +2,7 @@ package comm.example.demo.bean;
 
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class ToDo {
 	private String todoID;
 	private String todoName;

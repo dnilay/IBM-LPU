@@ -2,6 +2,7 @@ package comm.example.demo.repo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -18,8 +19,11 @@ public class ToDoRepositoryImpl implements ToDoRepository {
 	
 	private DataSource dataSource;
 	@Autowired
-	public ToDoRepositoryImpl(DataSource dataSource) {
+	public ToDoRepositoryImpl(DataSource dataSource) throws SQLException {
 		super();
+		logger.log(Level.INFO, "connecting to database");
+		connection=dataSource.getConnection();
+		logger.log(Level.INFO, "connected");
 		this.dataSource = dataSource;
 	}
 
@@ -29,9 +33,7 @@ public class ToDoRepositoryImpl implements ToDoRepository {
 
 	public ToDo createToDo(ToDo todo) {
 		try {
-			logger.log(Level.INFO, "connecting to database");
-			connection=dataSource.getConnection();
-			logger.log(Level.INFO, "connected");
+			
 			PreparedStatement pStatement=connection.prepareStatement("insert into todo value(?,?)");
 			pStatement.setString(1, todo.getTodoID());
 			pStatement.setString(2, todo.getTodoName());
