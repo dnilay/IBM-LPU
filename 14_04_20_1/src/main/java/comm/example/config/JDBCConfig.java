@@ -23,7 +23,7 @@ public class JDBCConfig {
 		DriverManagerDataSource dataSource=new DriverManagerDataSource();
 		dataSource.setUrl(environment.getProperty("db.url"));
 		dataSource.setUsername(environment.getProperty("db.user"));
-		dataSource.setPassword("db.password");
+		dataSource.setPassword(environment.getProperty("db.password"));
 		return dataSource;
 	}
 	
