@@ -17,7 +17,7 @@ public class StudentDAOImpl implements StudentDAO {
 	{
 		factory=MyHibernateFactory.getMyHibernateFactory();
 		sessionFactory=factory.getSessionFactory();
-		session=sessionFactory.openSession();
+		session=sessionFactory.getCurrentSession();
 	}
 
 	public Student createStudent(Student student) {
@@ -30,8 +30,9 @@ public class StudentDAOImpl implements StudentDAO {
 	}
 
 	public List<Student> getAllStudent() {
+		session.getTransaction().begin();
 		List<Student> list=session.createQuery("from Student",Student.class).list();
-		
+		session.getTransaction().commit();
 		return list;
 	}
 
