@@ -1,8 +1,11 @@
 package comm.example.demo.repo;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -23,6 +26,12 @@ public class AccountDAOImpl implements AccountDAO{
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
+	@PostConstruct
+	public void init()
+	{
+		logger.log(Level.INFO, "initializing bean");
+		//System.out.println("initializing bean");
+	}
 
 
 	public Account createAccount(Account account) {
@@ -65,10 +74,23 @@ public class AccountDAOImpl implements AccountDAO{
 	public void deleteById(String accountNumber) {
 		// TODO Auto-generated method stub
 		String str="delete from account where accountNumber='"+accountNumber+"'";
-		 jdbcTemplate.update(str);
-		 System.out.println("account deleted successfully with id: "+accountNumber);
+		 int result=jdbcTemplate.update(str);
+		 if(result==0)
+		 {
+			 System.out.println("no such accountnumber found: "+accountNumber);
+		 }
+		 else
+		 {
+			 System.out.println("account deleted successfully with id: "+accountNumber);
+		 }
+		 
 	}
-	
+	@PreDestroy
+	public void destroy()
+	{
+		jdbcTemplate=null;
+		logger.log(Level.INFO, "bean destroyed.");
+	}
 	
 
 }
