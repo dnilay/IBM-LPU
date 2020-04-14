@@ -26,6 +26,7 @@ public class App {
 		do {
 			System.out.println("1. Create Student");
 			System.out.println("2. Display All Available Student");
+			System.out.println("3. Display Student BY ID");
 			System.out.print("enter your choice:  ");
 			choice=scanner.nextInt();
 			switch (choice) {
@@ -49,6 +50,18 @@ public class App {
 				for(Student s:list)
 				{
 					System.out.println(s);
+				}
+				break;
+			case 3:
+				System.out.print("Enter Student ID: ");
+				student=service.getStudentByID(scanner.next());
+				if(student==null)
+				{
+					System.out.println("No Such Student Found With given ID: ");
+				}
+				else
+				{
+					System.out.println(student);
 				}
 				break;
 			case 0:

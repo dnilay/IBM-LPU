@@ -23,4 +23,9 @@ public class StudentServiceImpl implements StudentService {
 		return dao.getAllStudent();
 	}
 
+	public Student getStudentByID(String studnetID) {
+		// TODO Auto-generated method stub
+		return dao.getStudentByID(studnetID);
+	}
+
 }

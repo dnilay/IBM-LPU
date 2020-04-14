@@ -25,6 +25,7 @@ public class StudentDAOImpl implements StudentDAO {
 		session.getTransaction().begin();
 		session.save(student);
 		session.getTransaction().commit();
+	//	session.close();
 		return student;
 	}
 
@@ -32,6 +33,11 @@ public class StudentDAOImpl implements StudentDAO {
 		List<Student> list=session.createQuery("from Student",Student.class).list();
 		
 		return list;
+	}
+
+	public Student getStudentByID(String studnetID) {
+		// TODO Auto-generated method stub
+		return session.get(Student.class, studnetID);
 	}
 
 }
