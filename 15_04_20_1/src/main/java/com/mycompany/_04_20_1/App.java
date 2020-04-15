@@ -10,10 +10,6 @@ import org.hibernate.cfg.Configuration;
 import com.mycompany._04_20_1.example.Album;
 import com.mycompany._04_20_1.example.Image;
 
-/**
- * Hello world!
- *
- */
 public class App {
 	public static void main(String[] args) {
 		try {
