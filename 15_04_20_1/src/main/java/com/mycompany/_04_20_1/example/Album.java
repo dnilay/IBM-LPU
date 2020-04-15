@@ -20,5 +20,9 @@ public class Album {
 	private String albumName;
 	@OneToOne(cascade = CascadeType.ALL,mappedBy = "album")
 	private Image image;
+	@Override
+	public String toString() {
+		return "Album [albumID=" + albumID + ", albumName=" + albumName + ", image=" + image + "]";
+	}
 
 }

@@ -28,6 +28,11 @@ public class Image {
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="album_id")
 	private Album album;
+	@Override
+	public String toString() {
+		return "Image [imageID=" + imageID + ", imageURL=" + imageURL + ", isAvailable=" + isAvailable + ", album="
+				+ album.getAlbumID() +", "+album.getAlbumName()+"]";
+	}
 	
 		
 }

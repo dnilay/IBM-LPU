@@ -27,12 +27,16 @@ public class App {
 			 * image.setAlbum(myAlbum); session.getTransaction().begin();
 			 * session.save(image); session.getTransaction().commit();
 			 * 
-			 * 
-			 * List<Image> list = session.createQuery("from Image", Image.class).list(); //
-			 * System.out.println(list);
-			 * 
-			 * for (Image a : list) { System.out.println(a+"\n"); }
 			 */
+			 List<Image> list = session.createQuery("from Image", Image.class).list(); 
+			//  System.out.println(list);
+			
+			  for (Image a : list) {
+				  
+				  
+				 System.out.println(a);
+			  }
+			 // System.out.println(b);
 
 		} catch (Exception e) {
 			e.printStackTrace();
