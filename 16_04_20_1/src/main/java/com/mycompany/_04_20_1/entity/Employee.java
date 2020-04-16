@@ -12,31 +12,35 @@ import javax.persistence.Version;
 public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int employeeID;
+	private int id;
 	@Version
 	private int version;
 	private String name;
-	private int salary;
+	private long salary;
 	
 	public Employee() {
 		super();
 	}
 
 	
-	public Employee(String name, int salary) {
+	public Employee(String name, long salary) {
 		super();
 		this.name = name;
 		this.salary = salary;
 	}
 
 
-	public int getEmployeeID() {
-		return employeeID;
+	
+
+	public int getId() {
+		return id;
 	}
 
-	public void setEmployeeID(int employeeID) {
-		this.employeeID = employeeID;
+
+	public void setId(int id) {
+		this.id = id;
 	}
+
 
 	public int getVersion() {
 		return version;
@@ -54,17 +58,17 @@ public class Employee {
 		this.name = name;
 	}
 
-	public int getSalary() {
+	public long getSalary() {
 		return salary;
 	}
 
-	public void setSalary(int salary) {
+	public void setSalary(long salary) {
 		this.salary = salary;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee ID: "+getEmployeeID()+" Employee Name: "+getName()+" Numver Of Time employee Updated: "
+		return "Employee ID: "+getId()+" Employee Name: "+getName()+" Number Of Time employee's salary revised: "
 				+getVersion()+" Salary: "+getSalary();
 	}
 
