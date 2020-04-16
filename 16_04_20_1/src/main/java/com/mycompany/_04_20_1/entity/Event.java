@@ -63,11 +63,11 @@ public class Event {
 		this.duration = duration;
 	}
 
-	public void setSpeakers(Set speakers) {
+	public void setSpeakers(Set<Speaker> speakers) {
 		this.speakers = speakers;
 	}
 
-	public Set getSpeakers() {
+	public Set<Speaker> getSpeakers() {
 		return speakers;
 	}
 }
