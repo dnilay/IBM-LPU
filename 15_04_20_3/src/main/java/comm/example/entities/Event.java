@@ -24,7 +24,7 @@ public class Event {
     private int duration;
     
     // Event is the owner of the relationship
-    @ManyToMany(cascade= CascadeType.ALL,mappedBy = "events")
+    @ManyToMany(cascade= CascadeType.ALL)
     private Set<Speaker> speakers;
 
     public void setId(Long id) {

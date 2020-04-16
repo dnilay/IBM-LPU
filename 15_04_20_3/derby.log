@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Apr 15 17:28:42 IST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0171-7db4-a0c8-000006d3c630 
+on database directory /home/nilay/SAMPLE with class loader sun.misc.Launcher$AppClassLoader@75b84c92 
+Loaded from file:/home/nilay/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Private Build
+java.runtime.version=1.8.0_252-ea-8u252-b07-1-b07
+user.dir=/home/nilay/git/lpu/15_04_20_3
+os.name=Linux
+os.arch=amd64
+os.version=5.4.0-21-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
