@@ -8,13 +8,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
 
+	@RequestMapping("/")
+	public String home()
+	{
+		return "main-menu";
+	}
+	
+	
 	@RequestMapping("/showForm")
 	public String showForm() {
 		return "helloworld-form";
 	}
 
+	
 	@RequestMapping("/processForm")
 	public String processForm() {
 		// String str=request.getParameter("studentName");
