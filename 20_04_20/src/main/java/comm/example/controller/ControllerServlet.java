@@ -56,7 +56,7 @@ public class ControllerServlet extends HttpServlet {
 		{
 			ToDo todo=new ToDo(id, name, c_by);
 			request.setAttribute("todo", todo);//key and value pair
-			RequestDispatcher view=request.getRequestDispatcher("success.view");
+			RequestDispatcher view=request.getRequestDispatcher("success.jsp");
 			view.forward(request, response);
 		}
 		else
