@@ -63,7 +63,7 @@ public class ControllerServlet extends HttpServlet {
 		{
 			
 			request.setAttribute("error",errors);//key and value pair
-			RequestDispatcher view=request.getRequestDispatcher("error.view");
+			RequestDispatcher view=request.getRequestDispatcher("error.jsp");
 			view.forward(request, response);
 		}
 		
