@@ -1,6 +1,7 @@
 package comm.example.rest;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -41,7 +42,6 @@ public class StudentRestController {
 		return theStudents;
 	}
 
-	// define endpoint for "/students/{studentId}" - return student at index
 
 	@GetMapping("/students/{studentId}")
 	public Student getStudent(@PathVariable int studentId) throws StudentNotFoundException {
@@ -65,6 +65,10 @@ public class StudentRestController {
 			 */
 		return new ResponseEntity<StudentResponseEntity>(new StudentResponseEntity(HttpStatus.NOT_FOUND.value(), snfe.getMessage(),System.currentTimeMillis()),HttpStatus.NOT_FOUND);
 	}
-	
+	@ExceptionHandler
+	public ResponseEntity<StudentResponseEntity> handleNumberFormatException(NumberFormatException ipme)
+	{
+		return new ResponseEntity<StudentResponseEntity>(new StudentResponseEntity(HttpStatus.BAD_REQUEST.value(),"must provide numeric value", System.currentTimeMillis()),HttpStatus.BAD_REQUEST);
+	}
 	
 }
