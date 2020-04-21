@@ -2,6 +2,7 @@ package comm.example.entity;
 
 public class Student {
 
+	private int studentID;
 	private String firstName;
 	private String lastName;
 	
@@ -9,10 +10,17 @@ public class Student {
 		
 	}
 
-	public Student(String firstName, String lastName) {
+
+
+
+	public Student(int studentID, String firstName, String lastName) {
+		super();
+		this.studentID = studentID;
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
+
+
 
 	public String getFirstName() {
 		return firstName;
