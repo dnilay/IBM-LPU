@@ -5,41 +5,65 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import comm.example.entity.Student;
+import comm.example.exception.StudentNotFoundException;
+import comm.example.exception.StudentResponseEntity;
 
 @RestController
 @RequestMapping("/api")
 public class StudentRestController {
 
-	// define endpoint for "/students" - return list of students
-	List<Student> theStudents=null;
+	private List<Student> theStudents;
+
+	// define @PostConstruct to load the student data ... only once!
+
 	@PostConstruct
-	public void init()
-	{
-		theStudents = new ArrayList<Student>();
-		
-		theStudents.add(new Student(0,"Poornima", "Patel"));
-		theStudents.add(new Student(1,"Mario", "Rossi"));
-		theStudents.add(new Student(2,"Mary", "Smith"));		
-		
+	public void loadData() {
+
+		theStudents = new ArrayList<>();
+
+		theStudents.add(new Student("Poornima", "Patel"));
+		theStudents.add(new Student("Mario", "Rossi"));
+		theStudents.add(new Student("Mary", "Smith"));
 	}
-	
+
 	@GetMapping("/students")
 	public List<Student> getStudents() {
 
-		
 		return theStudents;
 	}
+
+	// define endpoint for "/students/{studentId}" - return student at index
+
+	@GetMapping("/students/{studentId}")
+	public Student getStudent(@PathVariable int studentId) throws StudentNotFoundException {
+
+		
+		if ( (studentId >= theStudents.size()) || (studentId < 0) ) {			
+			throw new StudentNotFoundException("Student id not found - " + studentId);
+		}
+		
+		return theStudents.get(studentId);
 	
-	@GetMapping("/students/{studentID}")
-	public Student getStudentByID(@PathVariable int studentID)
+	}
+	@ExceptionHandler
+		public ResponseEntity<StudentResponseEntity> handleException(StudentNotFoundException snfe)
 	{
-		return theStudents.get(studentID);
+	
+			/*
+			 * StringBuffer br=new StringBuffer(); br.append(HttpStatus.NOT_FOUND);
+			 * br.append(snfe.getMessage()); br.append(System.currentTimeMillis()); return
+			 * new ResponseEntity<Object>(br,HttpStatus.NOT_FOUND);
+			 */
+		return new ResponseEntity<StudentResponseEntity>(new StudentResponseEntity(HttpStatus.NOT_FOUND.value(), snfe.getMessage(),System.currentTimeMillis()),HttpStatus.NOT_FOUND);
 	}
 	
 	
