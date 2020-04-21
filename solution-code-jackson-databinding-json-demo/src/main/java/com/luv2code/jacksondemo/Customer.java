@@ -15,6 +15,16 @@ public class Customer {
 		
 	}
 
+	public Customer(int id, String firstName, String lastName, boolean active, Address address, String[] languages) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.active = active;
+		this.address = address;
+		this.languages = languages;
+	}
+
 	public int getId() {
 		return id;
 	}
