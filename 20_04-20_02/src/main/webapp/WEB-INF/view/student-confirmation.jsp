@@ -10,7 +10,7 @@
 <body>
 Student ID: ${student.id}<br/>
 Student First Name: ${student.firstName}<br/>
-Student Last Name: ${student.lastName}</br>
+Student Last Name: ${student.lastName}<br/>
 Student Email: ${student.email}<br/>
 </body>
 </html>
