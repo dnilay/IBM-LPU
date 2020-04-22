@@ -23,6 +23,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		this.entityManager = entityManager;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	@Transactional
 	public List<Employee> getEmployees() {
