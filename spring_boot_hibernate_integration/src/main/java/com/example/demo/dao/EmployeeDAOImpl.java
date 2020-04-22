@@ -10,12 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.example.demo.data.Employee;
 @Repository(value = "employeeDAO")
 @EnableTransactionManagement
 public class EmployeeDAOImpl implements EmployeeDAO {
-	
+
 	private EntityManager entityManager;
 
 	@Autowired
@@ -27,10 +26,10 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	@Override
 	@Transactional
 	public List<Employee> getEmployees() {
-		
-		Session session=entityManager.unwrap(Session.class);
-		
-		Query query=session.createQuery("from Employee",Employee.class);
+
+		Session session = entityManager.unwrap(Session.class);
+
+		Query query = session.createQuery("from Employee", Employee.class);
 		return query.getResultList();
 	}
 
@@ -38,7 +37,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	@Transactional
 	public Employee createEmployee(Employee employee) {
 		// TODO Auto-generated method stub
-		Session session=entityManager.unwrap(Session.class);
+		Session session = entityManager.unwrap(Session.class);
 		session.save(employee);
 		return employee;
 	}
