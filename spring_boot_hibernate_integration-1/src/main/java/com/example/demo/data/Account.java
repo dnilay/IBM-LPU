@@ -33,26 +33,7 @@ public class Account {
 	public int getAccoutNumber() {
 		return accoutNumber;
 	}
-	public void setAccoutNumber(int accoutNumber) {
-		this.accoutNumber = accoutNumber;
-	}
-	public String getAccountID() {
-		return accountID;
-	}
-	public void setAccountID(String accountID) {
-		this.accountID = accountID;
-	}
-	public String getAccountType() {
-		return accountType;
-	}
-	public void setAccountType(String accountType) {
-		this.accountType = accountType;
-	}
-	public double getBalance() {
-		return balance;
-	}
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
+
+	
 
 }
