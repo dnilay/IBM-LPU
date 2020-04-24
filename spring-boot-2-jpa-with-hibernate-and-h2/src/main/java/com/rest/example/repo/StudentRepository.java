@@ -13,6 +13,6 @@ public interface StudentRepository extends CrudRepository<Student, Long>{
 	public Iterable<Student> findByName(String name);
 	public Iterable<Student> findByPassportNumber(String passportNumber);
 	public Iterable<Student> findByNameAndPassportNumber(String name,String passportNumber);
-	
+	public void removeByName(String name);
 
 }
