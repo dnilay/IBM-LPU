@@ -1,0 +1,80 @@
+src/main/java/com/example/demo/SpringBootHibernateIntegration1Application.java:7:	CommentRequired: Class comments are required
+src/main/java/com/example/demo/SpringBootHibernateIntegration1Application.java:7:	CommentRequired: Class comments are required
+src/main/java/com/example/demo/SpringBootHibernateIntegration1Application.java:7:	UseUtilityClass: All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/com/example/demo/SpringBootHibernateIntegration1Application.java:7:	UseUtilityClass: All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/com/example/demo/SpringBootHibernateIntegration1Application.java:9:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/example/demo/SpringBootHibernateIntegration1Application.java:9:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/example/demo/SpringBootHibernateIntegration1Application.java:9:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/com/example/demo/SpringBootHibernateIntegration1Application.java:9:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/com/example/demo/dao/AccountDAO.java:7:	UnnecessaryAnnotationValueElement: Avoid the use of value in annotations when its the only element
+src/main/java/com/example/demo/dao/AccountDAO.java:7:	UnnecessaryAnnotationValueElement: Avoid the use of value in annotations when its the only element
+src/main/java/com/example/demo/dao/AccountDAO.java:8:	CommentRequired: Class comments are required
+src/main/java/com/example/demo/dao/AccountDAO.java:8:	CommentRequired: Class comments are required
+src/main/java/com/example/demo/data/Account.java:3:	UnusedImports: Avoid unused imports such as 'java.math.BigDecimal'
+src/main/java/com/example/demo/data/Account.java:3:	UnusedImports: Avoid unused imports such as 'java.math.BigDecimal'
+src/main/java/com/example/demo/data/Account.java:12:	CommentRequired: Class comments are required
+src/main/java/com/example/demo/data/Account.java:12:	CommentRequired: Class comments are required
+src/main/java/com/example/demo/data/Account.java:12:	DataClass: The class 'Account' is suspected to be a Data Class (WOC=0.000%, NOPA=0, NOAM=8, WMC=10)
+src/main/java/com/example/demo/data/Account.java:12:	DataClass: The class 'Account' is suspected to be a Data Class (WOC=0.000%, NOPA=0, NOAM=8, WMC=10)
+src/main/java/com/example/demo/data/Account.java:17:	CommentRequired: Field comments are required
+src/main/java/com/example/demo/data/Account.java:17:	CommentRequired: Field comments are required
+src/main/java/com/example/demo/data/Account.java:19:	CommentRequired: Field comments are required
+src/main/java/com/example/demo/data/Account.java:19:	CommentRequired: Field comments are required
+src/main/java/com/example/demo/data/Account.java:21:	CommentRequired: Field comments are required
+src/main/java/com/example/demo/data/Account.java:21:	CommentRequired: Field comments are required
+src/main/java/com/example/demo/data/Account.java:23:	CommentRequired: Field comments are required
+src/main/java/com/example/demo/data/Account.java:23:	CommentRequired: Field comments are required
+src/main/java/com/example/demo/data/Account.java:24:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/example/demo/data/Account.java:24:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/example/demo/data/Account.java:27:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/example/demo/data/Account.java:27:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/example/demo/data/Account.java:27:	MethodArgumentCouldBeFinal: Parameter 'accountType' is not assigned and could be declared final
+src/main/java/com/example/demo/data/Account.java:27:	MethodArgumentCouldBeFinal: Parameter 'accountType' is not assigned and could be declared final
+src/main/java/com/example/demo/data/Account.java:27:	MethodArgumentCouldBeFinal: Parameter 'balance' is not assigned and could be declared final
+src/main/java/com/example/demo/data/Account.java:27:	MethodArgumentCouldBeFinal: Parameter 'balance' is not assigned and could be declared final
+src/main/java/com/example/demo/data/Account.java:36:	MethodArgumentCouldBeFinal: Parameter 'accoutNumber' is not assigned and could be declared final
+src/main/java/com/example/demo/data/Account.java:36:	MethodArgumentCouldBeFinal: Parameter 'accoutNumber' is not assigned and could be declared final
+src/main/java/com/example/demo/data/Account.java:42:	MethodArgumentCouldBeFinal: Parameter 'accountID' is not assigned and could be declared final
+src/main/java/com/example/demo/data/Account.java:42:	MethodArgumentCouldBeFinal: Parameter 'accountID' is not assigned and could be declared final
+src/main/java/com/example/demo/data/Account.java:48:	MethodArgumentCouldBeFinal: Parameter 'accountType' is not assigned and could be declared final
+src/main/java/com/example/demo/data/Account.java:48:	MethodArgumentCouldBeFinal: Parameter 'accountType' is not assigned and could be declared final
+src/main/java/com/example/demo/data/Account.java:54:	MethodArgumentCouldBeFinal: Parameter 'balance' is not assigned and could be declared final
+src/main/java/com/example/demo/data/Account.java:54:	MethodArgumentCouldBeFinal: Parameter 'balance' is not assigned and could be declared final
+src/main/java/com/example/demo/service/AccountService.java:3:	UnusedImports: Avoid unused imports such as 'java.util.List'
+src/main/java/com/example/demo/service/AccountService.java:3:	UnusedImports: Avoid unused imports such as 'java.util.List'
+src/main/java/com/example/demo/service/AccountService.java:9:	CommentRequired: Class comments are required
+src/main/java/com/example/demo/service/AccountService.java:9:	CommentRequired: Class comments are required
+src/main/java/com/example/demo/service/AccountService.java:11:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/example/demo/service/AccountService.java:11:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/example/demo/service/AccountService.java:11:	UnnecessaryModifier: Unnecessary modifier 'public' on method 'getAccounts': the method is declared in an interface type
+src/main/java/com/example/demo/service/AccountService.java:11:	UnnecessaryModifier: Unnecessary modifier 'public' on method 'getAccounts': the method is declared in an interface type
+src/main/java/com/example/demo/service/AccountServiceImpl.java:3:	UnusedImports: Avoid unused imports such as 'java.util.List'
+src/main/java/com/example/demo/service/AccountServiceImpl.java:3:	UnusedImports: Avoid unused imports such as 'java.util.List'
+src/main/java/com/example/demo/service/AccountServiceImpl.java:8:	CommentRequired: Class comments are required
+src/main/java/com/example/demo/service/AccountServiceImpl.java:8:	CommentRequired: Class comments are required
+src/main/java/com/example/demo/service/AccountServiceImpl.java:10:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/example/demo/service/AccountServiceImpl.java:10:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/example/demo/service/AccountServiceImpl.java:10:	CommentRequired: Field comments are required
+src/main/java/com/example/demo/service/AccountServiceImpl.java:10:	CommentRequired: Field comments are required
+src/main/java/com/example/demo/service/AccountServiceImpl.java:10:	ImmutableField: Private field 'accountDAO' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/com/example/demo/service/AccountServiceImpl.java:10:	ImmutableField: Private field 'accountDAO' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/com/example/demo/service/AccountServiceImpl.java:12:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/example/demo/service/AccountServiceImpl.java:12:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/example/demo/service/AccountServiceImpl.java:12:	MethodArgumentCouldBeFinal: Parameter 'accountDAO' is not assigned and could be declared final
+src/main/java/com/example/demo/service/AccountServiceImpl.java:12:	MethodArgumentCouldBeFinal: Parameter 'accountDAO' is not assigned and could be declared final
+src/main/java/com/example/demo/service/AccountServiceImpl.java:20:	LocalVariableCouldBeFinal: Local variable 'accounts' could be declared final
+src/main/java/com/example/demo/service/AccountServiceImpl.java:20:	LocalVariableCouldBeFinal: Local variable 'accounts' could be declared final
+src/main/java/com/example/demo/service/AccountServiceImpl.java:21:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/com/example/demo/service/AccountServiceImpl.java:21:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/test/java/com/example/demo/SpringBootHibernateIntegration1ApplicationTests.java:7:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/test/java/com/example/demo/SpringBootHibernateIntegration1ApplicationTests.java:7:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/test/java/com/example/demo/SpringBootHibernateIntegration1ApplicationTests.java:7:	CommentRequired: Class comments are required
+src/test/java/com/example/demo/SpringBootHibernateIntegration1ApplicationTests.java:7:	CommentRequired: Class comments are required
+src/test/java/com/example/demo/SpringBootHibernateIntegration1ApplicationTests.java:9:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/test/java/com/example/demo/SpringBootHibernateIntegration1ApplicationTests.java:9:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/test/java/com/example/demo/SpringBootHibernateIntegration1ApplicationTests.java:10:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the contextLoads method if you want a default access modifier
+src/test/java/com/example/demo/SpringBootHibernateIntegration1ApplicationTests.java:10:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the contextLoads method if you want a default access modifier
+src/test/java/com/example/demo/SpringBootHibernateIntegration1ApplicationTests.java:10:	JUnitTestsShouldIncludeAssert: JUnit tests should include assert() or fail()
+src/test/java/com/example/demo/SpringBootHibernateIntegration1ApplicationTests.java:10:	JUnitTestsShouldIncludeAssert: JUnit tests should include assert() or fail()
+src/test/java/com/example/demo/SpringBootHibernateIntegration1ApplicationTests.java:10:	UncommentedEmptyMethodBody: Document empty method body
+src/test/java/com/example/demo/SpringBootHibernateIntegration1ApplicationTests.java:10:	UncommentedEmptyMethodBody: Document empty method body
