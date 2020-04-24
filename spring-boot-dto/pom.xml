@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.example</groupId>
-	<artifactId>spring_boot_hibernate_integration-1</artifactId>
+	<artifactId>spring-boot-dto</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring_boot_hibernate_integration-1</name>
+	<name>spring-boot-dto</name>
 	<description>spring-boot-jpa-data</description>
 
 	<properties>
@@ -32,12 +32,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-<dependency>
-    <groupId>org.modelmapper</groupId>
-    <artifactId>modelmapper</artifactId>
-    <version>2.3.7</version>
-</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -48,6 +42,11 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

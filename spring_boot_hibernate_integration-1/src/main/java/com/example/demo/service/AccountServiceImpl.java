@@ -20,10 +20,10 @@ public class AccountServiceImpl implements AccountService {
 
 	@Override
 	@Transactional
-	public ResponseEntity<Iterable<Account>> getAccounts() {
+	public Iterable<Account> getAccounts() {
 		
 		Iterable<Account> accounts=accountDAO.findAll();
-		return ResponseEntity.ok().body(accounts);
+		return accounts;
 	}
 
 }

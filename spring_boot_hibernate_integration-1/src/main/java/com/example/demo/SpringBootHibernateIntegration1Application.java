@@ -2,6 +2,7 @@ package com.example.demo;
 
 import java.util.UUID;
 
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,6 +29,7 @@ public class SpringBootHibernateIntegration1Application implements CommandLineRu
 		SpringApplication.run(SpringBootHibernateIntegration1Application.class, args);
 	}
 
+	
 	@Override
 	public void run(String... args) throws Exception {
 	

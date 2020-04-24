@@ -6,6 +6,6 @@ import com.example.demo.data.Account;
 
 public interface AccountService {
 	
-	public ResponseEntity<Iterable<Account>> getAccounts();
+	public Iterable<Account> getAccounts();
 
 }
