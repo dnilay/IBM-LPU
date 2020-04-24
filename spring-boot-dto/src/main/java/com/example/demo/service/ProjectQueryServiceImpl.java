@@ -2,6 +2,7 @@ package com.example.demo.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,10 +15,13 @@ public class ProjectQueryServiceImpl implements ProjectQueryService {
 
 
  private ProjectRepository projectRepo;
+ private ModelMapper modelMapper;
 
- public ProjectQueryServiceImpl(ProjectRepository projectRepo) {
+@Autowired
+public ProjectQueryServiceImpl(ProjectRepository projectRepo, ModelMapper modelMapper) {
 	super();
 	this.projectRepo = projectRepo;
+	this.modelMapper = modelMapper;
 }
 
 @Override
@@ -34,10 +38,10 @@ public class ProjectQueryServiceImpl implements ProjectQueryService {
 
  @Override
  public List<ProjectQueryDTO> getAllProjects() {
+	
   List<ProjectQueryDTO> projectList = new ArrayList<>();
   projectRepo.findAll().forEach(project -> {
-   projectList.add(new ProjectQueryDTO( project.getName(), project.getDescription(),
-     project.getAgentName()));
+   projectList.add(modelMapper.map(project, ProjectQueryDTO.class));
   });
 
   return projectList;

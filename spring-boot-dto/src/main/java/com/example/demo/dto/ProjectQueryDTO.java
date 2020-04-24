@@ -5,7 +5,13 @@ public class ProjectQueryDTO {
  private String description;
  private String agentName;
 
- public ProjectQueryDTO(String name, String description, String agentName) {
+ public ProjectQueryDTO() {
+	super();
+}
+
+
+
+public ProjectQueryDTO(String name, String description, String agentName) {
 
   this.name = name;
   this.description = description;

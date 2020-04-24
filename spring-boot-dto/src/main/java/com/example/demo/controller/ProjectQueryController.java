@@ -1,4 +1,5 @@
 package com.example.demo.controller;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,10 +15,17 @@ import com.example.demo.service.ProjectQueryService;
 @RequestMapping("/api")
 public class ProjectQueryController {
 
- @Autowired
+
  private ProjectQueryService projectQueryService;
 
- @GetMapping("/projects")
+@Autowired
+ public ProjectQueryController(ProjectQueryService projectQueryService) {
+	super();
+	this.projectQueryService = projectQueryService;
+	
+}
+
+@GetMapping("/projects")
  public ResponseEntity<Object> getAllProjects() {
   return new ResponseEntity<>(projectQueryService.getAllProjects(), HttpStatus.OK);
  }
