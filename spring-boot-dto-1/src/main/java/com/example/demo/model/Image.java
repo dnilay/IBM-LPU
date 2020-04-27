@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 
 @Entity
@@ -15,6 +17,7 @@ public class Image {
 	@Column(name = "image_url")
 	private String imageURL;
 	@Column(name = "available")
+	@JsonProperty
 	private boolean isAvailable;
 	public Image() {
 		super();
