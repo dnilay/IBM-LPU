@@ -1,0 +1,12 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: zull-proxy
+  cloud:
+    consul:
+      discovery:
+        serviceName: zull-proxy
+        register: true
+      host: 127.0.0.1
+      port: 8500
