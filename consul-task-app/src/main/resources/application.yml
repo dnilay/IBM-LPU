@@ -14,3 +14,8 @@ spring:
         service-name: task-service
       host: localhost
       port: 8500
+  datasource:
+    url: jdbc:mysql://localhost:3306/hr
+    username: root
+    password: Root@1234
+    driver-class-name: 
