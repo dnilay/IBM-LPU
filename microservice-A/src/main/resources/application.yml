@@ -10,5 +10,8 @@ spring:
         service-name: service-A
       host: localhost
       port: 8500
+feign:
+  hystrix:
+    enabled: true
 
 
