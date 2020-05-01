@@ -1,5 +1,10 @@
 package com.example.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
@@ -10,8 +15,12 @@ import lombok.ToString;
 @Data
 @ToString
 @NoArgsConstructor
+@Entity
 public class Item {
-    private String itemName;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String itemName;
     private String category;
     private String description;
 }

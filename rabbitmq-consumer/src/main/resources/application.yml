@@ -19,4 +19,7 @@ spring:
         service-name: rabbit-consumer
       host: localhost
       port: 8500
+  h2:
+    console:
+      enabled: true
 
