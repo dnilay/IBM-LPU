@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.client.Employeeclient;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
 @EnableAutoConfiguration
@@ -23,10 +24,13 @@ public class DepartmentController {
 	}
 
 	@RequestMapping("/departments/hello")
+	
 	public ResponseEntity<String> sayHello(@RequestParam String name)
 	{
 		String result=employeeclient.callHi(name);
 		return ResponseEntity.status(HttpStatus.OK).body(result);
 	}
+	
+	
 
 }
