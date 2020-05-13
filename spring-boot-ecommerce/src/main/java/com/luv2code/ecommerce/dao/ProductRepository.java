@@ -13,4 +13,6 @@ import com.luv2code.ecommerce.entity.Product;
 public interface ProductRepository extends JpaRepository<Product, Long> {
 	@Query
 	Page<Product> findByCategoryId(@RequestParam("id") Long id, Pageable pageable);
+	@Query
+	Page<Product> findByNameContaining(@RequestParam("name") String name, Pageable pageable);
 }
